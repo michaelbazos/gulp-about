@@ -1,0 +1,10 @@
+# IDE-specific
+# ------------
+
+.idea
+
+
+# Node modules
+# ------------
+
+node_modules

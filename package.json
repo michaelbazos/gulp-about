@@ -1,0 +1,44 @@
+{
+  "name": "gulp-about",
+  "version": "1.0.0",
+  "description": "Compiles information about your application, such as name, version, etc.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michaelbazos/gulp-about.git"
+  },
+  "keywords": [
+    "gulpplugin",
+    "gulp",
+    "about",
+    "pick",
+    "name",
+    "version",
+    "packagejson"
+  ],
+  "engines": {
+    "node": ">= 0.10"
+  },
+  "files": [
+    "index.js"
+  ],
+  "author": "Michael P. Bazos",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/michaelbazos/gulp-about/issues"
+  },
+  "homepage": "https://github.com/michaelbazos/gulp-about#readme",
+  "dependencies": {
+    "gulp-util": "^3.0.7",
+    "lodash.defaults": "^3.1.2",
+    "lodash.pick": "^3.1.0",
+    "through2": "^2.0.0"
+  },
+  "devDependencies": {
+    "chai": "^3.4.1",
+    "mocha": "^2.3.4"
+  }
+}
