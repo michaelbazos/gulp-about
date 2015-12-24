@@ -1,4 +1,4 @@
-# gulp-about
+# gulp-about [![Build Status](https://travis-ci.org/michaelbazos/gulp-about.svg?branch=master)](https://travis-ci.org/michaelbazos/gulp-about)
 
 Gulp plugin useful for generating information about your application build, such as name, version ...
 
