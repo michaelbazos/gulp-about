@@ -21,14 +21,14 @@ describe('gulp-about', function () {
         });
 
         stream.on('end', cb);
-
         stream.write(new gutil.File({contents: data}));
-
         stream.end();
     });
 
     it('should generate an object with name, version and author properties', function (cb) {
-        var stream = about({keys: ['name', 'version', 'author']});
+        var stream = about({
+            keys: ['name', 'version', 'author']
+        });
 
         stream.on('data', function (data) {
             var output = JSON.parse(data.contents.toString());
@@ -36,9 +36,24 @@ describe('gulp-about', function () {
         });
 
         stream.on('end', cb);
-
         stream.write(new gutil.File({contents: data}));
+        stream.end();
+    });
 
+    it('should generate an object with name, version and buildNumber properties', function (cb) {
+        var stream = about({
+            inject: {
+                buildNumber: '12345'
+            }
+        });
+
+        stream.on('data', function (data) {
+            var output = JSON.parse(data.contents.toString());
+            expect(output).to.deep.equal({name: 'gulp-about', version: 'x.y.z', buildNumber: '12345'});
+        });
+
+        stream.on('end', cb);
+        stream.write(new gutil.File({contents: data}));
         stream.end();
     });
 });
