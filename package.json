@@ -1,7 +1,7 @@
 {
   "name": "gulp-about",
-  "version": "1.0.0",
-  "description": "Compiles information about your application, such as name, version, etc.",
+  "version": "1.1.0",
+  "description": "Gulp plugin for producing a json describing your application (name, version, buildDate, etc.)",
   "main": "index.js",
   "scripts": {
     "test": "mocha"
