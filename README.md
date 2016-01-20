@@ -33,7 +33,10 @@ Pass options to `gulp-about`:
 gulp.task('about', function () {
     return gulp.src('package.json')
         .pipe(about({
-            keys: ['name', 'version', 'author']
+            keys: ['name', 'version', 'author'],   // properties to pick from the source
+            inject: {                              // custom properties to inject
+                buildDate: Date.now()
+            }
         }))
         .pipe(gulp.dest('dist'));
 });
@@ -59,6 +62,13 @@ Type: `Number`
 Default: `2`
 
 The number of spaces used for indentation in the destination file.
+
+### inject
+
+Type: `Object`
+Default: `{}`
+
+Object of properties to inject in the output. Useful to extend the output with properties not in the source file.
 
 # License
 
